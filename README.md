@@ -1,8 +1,8 @@
-## Project Report: Automated Vehicle Damage Classification via Deep Learning
+## Project Report: Automated Car Damage Classification via Deep Learning
 
 ### 1. Project Overview
 
-This project implements a robust supervised learning pipeline designed to automate the classification of vehicle damage into six distinct categories. By architecting and evaluating multiple Convolutional Neural Network (CNN) configurations, the system provides a scalable solution for identifying damage patterns directly from digital imagery.
+This project implements a robust supervised learning pipeline designed to automate the classification of car damage into six distinct categories. By architecting and evaluating multiple Convolutional Neural Network (CNN) configurations, the system provides a scalable solution for identifying damage patterns directly from digital imagery.
 
 The primary objective is to deliver high-precision visual assessments that streamline workflows for insurance adjusters, auto repair technicians, and vehicle inspectors. By replacing manual inspection with automated detection, stakeholders can significantly accelerate claims processing and minimize human subjectivity in damage appraisal.
 
