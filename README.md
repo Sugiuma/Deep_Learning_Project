@@ -50,11 +50,11 @@ This 3-layer convolutional baseline (16, 32, 64 filters) served as the control. 
 
 To address early-stage gradient instability, this iteration introduced Batch Normalization after each convolutional layer. Implemented L2 weight decay (1e-4) and increased the dropout rate to 0.5 to penalize large weights and prevent the model from becoming overly sensitive to specific training features.
 
-#### 4.3 EfficientNet-B0
+#### 4.3 EfficientNet-B0 - Transfer Learning
 
 This approach utilized a frozen feature extractor pre-trained on ImageNet. While computationally efficient, the frozen weights limited the model’s ability to distinguish subtle vehicle-specific damage patterns, as the backbone remained tuned for general object recognition rather than specialized automotive damage.
 
-#### 4.4 ResNet50 (Optimal Model)
+#### 4.4 ResNet50 (Optimal Model) - Transfer Learning
 
 ResNet50 emerged as the superior architecture. Unlike the EfficientNet approach, we unfroze Layer4 and the fully connected layers for fine-tuning. This choice was deliberate: while earlier layers capture generic edges and textures, Layer4 captures high-level semantic features. Unfreezing these deeper layers allowed the model to adapt its complex shape-recognition capabilities to the specific nuances of vehicle damage, resulting in a significant performance delta over fully frozen models.
 
