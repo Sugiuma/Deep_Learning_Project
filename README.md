@@ -6,9 +6,6 @@ This project implements a robust supervised learning pipeline designed to automa
 
 The primary objective is to deliver high-precision visual assessments that streamline workflows for insurance adjusters, auto repair technicians, and vehicle inspectors. By replacing manual inspection with automated detection, stakeholders can significantly accelerate claims processing and minimize human subjectivity in damage appraisal.
 
-## Experience the system in action: 
-Explore the Live Inference Interface
-
 ### 2. Core System Features
 
 The technical architecture incorporates several engineering strategies to ensure high-performance inference and model reliability:
@@ -23,16 +20,19 @@ The technical architecture incorporates several engineering strategies to ensure
 ### 3. Dataset and Image Preprocessing
 
 **Data Composition**
-The training environment is configured to ingest data from the ../dataset directory, where images are organized into six distinct damage classes (e.g., bumper dents, door scratches, broken glass, etc.). The pipeline employs a 75%/25% training/validation split to maintain a rigorous evaluation holdout.
+
+The training environment is configured to ingest data from the ../dataset directory, where images are organized into six distinct damage classes (front breakage, front crushed, front normal, rear breakage, rear crushed, rear normal). The pipeline employs a 75%/25% training/validation split to maintain a rigorous evaluation holdout.
 
 **Preprocessing Pipeline**
+
 To ensure input consistency for the neural network backbones, the following transformations are enforced:
 
-* Resizing: All input images are standardized to a resolution of 224x224 pixels to match the input requirements of the pre-trained backbones.
-* Normalization: Pixel values are scaled using ImageNet statistics—mean: [0.485, 0.456, 0.406] and standard deviation: [0.229, 0.224, 0.225]—to ensure the input distribution aligns with the weights of the pre-trained models.
+* **Resizing:** All input images are standardized to a resolution of 224x224 pixels to match the input requirements of the pre-trained backbones.
+* **Normalization:** Pixel values are scaled using ImageNet statistics—mean: [0.485, 0.456, 0.406] and standard deviation: [0.229, 0.224, 0.225]—to ensure the input distribution aligns with the weights of the pre-trained models.
 
 **Augmentation Techniques**
-To expand the effective size of the training set and improve robustness against real-world image variability, we implemented the following:
+
+To expand the effective size of the training set and improve robustness against real-world image variability, implemented the following:
 
 * Random horizontal flips.
 * Random rotations to simulate varying camera orientations.
@@ -44,11 +44,11 @@ The project followed an iterative architectural evolution, moving from baseline 
 
 #### 4.1 Custom CNN
 
-This 3-layer convolutional baseline (16, 32, 64 filters) served as our control. It utilizes ReLU activation and MaxPooling for spatial dimensionality reduction, with a dropout-heavy fully connected head to prevent the network from memorizing the training samples.
+This 3-layer convolutional baseline (16, 32, 64 filters) served as the control. It utilizes ReLU activation and MaxPooling for spatial dimensionality reduction, with a dropout-heavy fully connected head to prevent the network from memorizing the training samples.
 
 #### 4.2 CNN with Regularization
 
-To address early-stage gradient instability, this iteration introduced Batch Normalization after each convolutional layer. We implemented L2 weight decay (1e-4) and increased the dropout rate to 0.5 to penalize large weights and prevent the model from becoming overly sensitive to specific training features.
+To address early-stage gradient instability, this iteration introduced Batch Normalization after each convolutional layer. Implemented L2 weight decay (1e-4) and increased the dropout rate to 0.5 to penalize large weights and prevent the model from becoming overly sensitive to specific training features.
 
 #### 4.3 EfficientNet-B0
 
@@ -87,3 +87,5 @@ Our stack prioritizes performance, reproducibility, and ease of deployment.
 
 To facilitate high-speed training and real-time inference on the web interface, the system supports full GPU acceleration.
 
+### Experience the system in action: 
+Explore the Live Inference Interface
