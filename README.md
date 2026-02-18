@@ -80,12 +80,28 @@ The following configuration, specifically optimized for the ResNet50 backbone, y
 
 Our stack prioritizes performance, reproducibility, and ease of deployment.
 
-* Deep Learning Frameworks: PyTorch, torchvision.
+* Deep Learning Frameworks: PyTorch, Pillow, torchvision.
 * Pre-trained Models/Backbones: ResNet50, EfficientNet-B0.
 * Data Science & Visualization: NumPy, Pandas, Matplotlib, scikit-learn.
 * Deployment & Environment: Streamlit (Web Framework), Jupyter Notebook, Python 3.8+.
 
+**Note:** Works best with images taken from the front or rear of the car.
+
 To facilitate high-speed training and real-time inference on the web interface, the system supports full GPU acceleration.
+
+### ⚙️ Installation & Setup
+Clone the repository:
+
+git clone https://github.com/Sugiuma/Deep_Learning_Project.git
+cd car-damage-detection
+
+Install the dependencies:
+
+ pip install -r requirements.txt
+ 
+Run the streamlit app:
+
+streamlit run app.py
 
 ### Experience the system in action: 
 Explore the Live Inference Interface
