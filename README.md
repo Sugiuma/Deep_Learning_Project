@@ -103,5 +103,5 @@ pip install -r requirements.txt
 ```bash
 streamlit run app.py
 ```
-### Experience the system in action: 
-Explore the Live Inference Interface
+### App screenshot: 
+![Image](https://github.com/Sugiuma/Deep_Learning_Project/blob/main/app_1.png)
