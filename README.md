@@ -21,7 +21,7 @@ The technical architecture incorporates several engineering strategies to ensure
 
 **Data Composition**
 
-The training environment is configured to ingest data from the ../dataset directory, where images are organized into six distinct damage classes (front breakage, front crushed, front normal, rear breakage, rear crushed, rear normal). The pipeline employs a 75%/25% training/validation split to maintain a rigorous evaluation holdout.
+The training environment is configured to ingest data from the ../dataset directory, where images are organized into six distinct damage classes (**front breakage, front crushed, front normal, rear breakage, rear crushed, rear normal**). The pipeline employs a 75%/25% training/validation split to maintain a rigorous evaluation holdout.
 
 **Preprocessing Pipeline**
 
