@@ -4,7 +4,7 @@ from model_helper import predict
 
 st.set_page_config(page_title= "Automated Car Damage Detection", page_icon="🚘", layout="centered")
 
-st.title("🚘 Automated Car Damage Detection")
+st.subheader("🚘 Automated Car Damage Detection")
 
 
 uploaded_file = st.file_uploader("Upload the Photo", type=['jpg', 'png'])
