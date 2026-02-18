@@ -90,18 +90,18 @@ Our stack prioritizes performance, reproducibility, and ease of deployment.
 To facilitate high-speed training and real-time inference on the web interface, the system supports full GPU acceleration.
 
 ### ⚙️ Installation & Setup
-Clone the repository:
-
+1. Clone the repository:
+```bash
 git clone https://github.com/Sugiuma/Deep_Learning_Project.git
-cd car-damage-detection
+```
 
-Install the dependencies:
-
- pip install -r requirements.txt
- 
-Run the streamlit app:
-
+2. Install the dependencies:
+```bash
+pip install -r requirements.txt
+```
+3. Run the streamlit app:
+```bash
 streamlit run app.py
-
+```
 ### Experience the system in action: 
 Explore the Live Inference Interface
