@@ -65,7 +65,7 @@ ResNet50 emerged as the superior architecture. Unlike the EfficientNet approach,
 The fine-tuned ResNet50 architecture demonstrated the highest efficacy, balancing classification accuracy with manageable computational overhead.
 
 **Metric	Result**
-Validation Accuracy	~81%
+Validation Accuracy	~80%
 (10 Epochs)
 
 **Optimal Hyperparameters**
